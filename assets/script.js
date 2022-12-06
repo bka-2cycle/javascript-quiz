@@ -14,7 +14,7 @@ var score =0;
 var questions = [
     {
     question: "Which planet produces the best Javascript programmers?",
-    choices: ["Romulus", "Andoria", "Vulcan", "Omicron", "Vulcan"],
+    choices: ["Romulus", "Andoria", "Vulcan", "Omicron",],
     answer: "Vulcan",
     },{
     question: "Which of the following Javascript terms is also used to start your car?",
@@ -38,12 +38,16 @@ var questions = [
     answer: "Mocha"
     },{
     question: "What was the first website created with Javascript?",
-    choiceA : ["Java the Hut", "Hot Java", "Java Cake", "Molten Java"],
-    correct : "Hot Java"
+    choices : ["Java the Hut", "Hot Java", "Java Cake", "Molten Java"],
+    answer : "Hot Java"
     }];
-
-
-    //console.log(questions);
+//test
+console.log(questions);
+    for (var i = 0; i < questions.length; i++) { 
+        console.log("I want to know " + questions[i].question + ".");
+        console.log(questions[i].answer);
+    }
+    
     //console.log(typeof questions);
     //console.log(questions[0].choices[2]);
 
@@ -102,38 +106,14 @@ answersEl.append(answerButton04);
   //how to add data to a dynamic element
 }
 
+//for (var i = 0; i < questions.length; i++) { 
+    
+      
+         if (questions[i] == questions[0].question) {
+        //questionEl.innerHTML = "<h3>"+ questions[1].question +"</h3>";
+        questionEl.append(questions[1].question);
+         }
 
-
-
-//a function to display the question --WORKS
-function displayQuestionOne() {
-    //questionEl.textContent = questions[0].question;
-    questionEl.innerHTML = "<h3>"+ questions[1].question +"</h3>";
-}
-
-
-//a function to display the answers as buttons
-function displayAnswersOne() {
-var answerButton01 = document.createElement("button");
-answerButton01.textContent = questions[1].choices[0];
-answersEl.append(answerButton01);
-  //how to add data to a dynamic element
-
-var answerButton02 = document.createElement("button");
-answerButton02.textContent = questions[1].choices[1];
-answersEl.append(answerButton02);
-  //how to add data to a dynamic element
-
-var answerButton03 = document.createElement("button");
-answerButton03.textContent = questions[1].choices[2];
-answersEl.append(answerButton03);
-  //how to add data to a dynamic element
-
-var answerButton04 = document.createElement("button");
-answerButton04.textContent = questions[1].choices[3];
-answersEl.append(answerButton04);
-  //how to add data to a dynamic element
-}
 
 // use data-attributes to get data from buttons to ID the correct answer
 
@@ -206,14 +186,14 @@ answersEl.append(answerButton04);
 
 // first atttempt
 
-answersEl.addEventListener("click", function(event) {
+/* answersEl.addEventListener("click", function(event) {
 if (questionsIndex = [0]) {
     //questionsIndex++;
     displayQuestionOne();
     displayAnswersOne();
     //console.log(questionsIndex);
     console.log(event.target);
-}
+} */
 /* else if (questionsIndex = [1]) {
     questionsIndex++;
     displayQuestion();
@@ -254,7 +234,7 @@ else if (questionsIndex = [6]) {
     return;
 } */
 
-});
+//});
 
 
 
